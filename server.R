@@ -99,4 +99,7 @@ shinyServer(function(input, output) {
     # datatable(df.ions, class = "display", autoHideNavigation = TRUE, filter = "none",
               # extensions = c("Responsive", "RowGroup", "Scroller","ColReorder"))
   })
+  # output$markdown <- render({
+  #   HTML(markdown::markdownToHTML(knit('about.rmd', quiet = TRUE)))
+  # })
 })

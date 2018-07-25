@@ -11,10 +11,11 @@ library(randomcoloR)
 library(geojsonio)
 library(rgdal)
 library(prettydoc)
+library(knitr)
 
 
 source("stiff-to-geojson.R")
-dataexample = data.frame(read.csv("www/data/data.csv"))
+dataexample = read.csv("www/data/data.csv")
 
 
 

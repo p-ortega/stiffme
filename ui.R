@@ -9,12 +9,12 @@ shinyUI(
       sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("home"), selected = TRUE),
       menuItem("Data", tabName = "data", icon = icon("table")),
-      menuItem('About', tabName = 'about', icon = icon('info')),
-      hr(),
-      sidebarUserPanel(name = a("Pablo Ortega",
-                                href = "https://www.linkedin.com/in/portega/"), 
-                       subtitle = "Creator",
-                       image = "images/portega.jpg")
+      menuItem('About', tabName = 'about', icon = icon('info'))
+      # hr(),
+      # sidebarUserPanel(name = a("Pablo Ortega",
+      #                           href = "https://www.linkedin.com/in/portega/"), 
+      #                  # subtitle = "Creator",
+      #                  image = "images/portega.jpg")
     ) ),
     
     dashboardBody(
@@ -58,7 +58,9 @@ shinyUI(
                         # )
                     ),
                 tabItem(tabName = "about",
-                        includeMarkdown("about.md")
+                        includeMarkdown(knit("about.rmd"))
+                        # includeHTML("about.html")
+                        # htmlOutput('markdown')
                         )
                 )
     )

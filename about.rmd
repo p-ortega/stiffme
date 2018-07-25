@@ -1,0 +1,36 @@
+---
+title: "About Stiffme app"
+author: "Pablo Ortega"
+date: "July 25, 2018"
+output: html_document
+---
+
+# Purpose
+
+The idea behind the app is to deliver an easy, fast and interactive way to produce stiff diagrams.
+The app is free to use, and the only thing I ask is to share the app with your friends, colleagues, students, researchers, etc.
+
+# How to use
+Generate Stiff Diagrams in this app is very straight forward. The only thing you have to do is to upload the chemical data. As a rule, you have to provide all the ions necessary to build the diagrams: Na, Ca, Mg, HCO3, SO4 and Cl, and you have to supply coordinates of the points. In addition we recommend to add the name to each point. In the next table there is an example of how to order your data.
+
+```{r echo = FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+dataexample = read.csv("C:/Users/pablo/Documents/R/stiffme/www/data/data.csv")
+kable(dataexample, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+# Considerations
+* For now only CRS = WGS 84 UTM 19S is supported
+* If there is missing data in the CSV the app will not compute your diagram. More exceptions will be added in the future updates.
+* Future updates will include more options to format and filter your diagrams. Also we will include a reference Piper diagram.
+
+# About GeoJSON vs Esri Shape
+We are committed to deliver open and free to use apps and software. In this way, all the Stiff diagrams will be exported in geoJSON file (open and free) instead of shape (Esri owned). If you need a .shp please convert it yourself with a software like [QGIS](https://qgis.org/es/site/forusers/download.html)
+
+# Source code
+Full source code is available from the [Stiff me GitHub repository.](https://github.com/p-ortega/stiffme) Comments, bug reports and pull requests are always welcome.
+
+# References
+Stiff, H.A., Jr., 1951, The interpretation of chemical water analysis by means of patterns: Journal of Petroleum Technology, v. 3. no. 10, section 1: p15,16 and section 2: p3.
