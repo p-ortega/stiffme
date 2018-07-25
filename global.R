@@ -9,8 +9,8 @@ library(shinydashboard)
 library(sp)
 library(randomcoloR)
 library(geojsonio)
-library(rgdal)
-library(prettydoc)
+# library(rgdal)
+# library(prettydoc)
 library(knitr)
 
 

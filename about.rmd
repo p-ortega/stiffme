@@ -16,7 +16,7 @@ Generate Stiff Diagrams in this app is very straight forward. The only thing you
 ```{r echo = FALSE, warning=FALSE}
 library(knitr)
 library(kableExtra)
-dataexample = read.csv("C:/Users/pablo/Documents/R/stiffme/www/data/data.csv")
+# dataexample = read.csv("C:/Users/pablo/Documents/R/stiffme/www/data/data.csv")
 kable(dataexample, align = "c") %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
